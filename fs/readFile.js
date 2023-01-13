@@ -22,3 +22,10 @@ fsp.readFile('./fs/text.txt', {encoding: 'utf-8'})
         console.log(result);
     })
 console.log("Read from file");
+
+fs.readdir('./pubSub', (err, files) => {
+    if (err) {
+        return
+    }
+    console.log(files.join(", "));
+});
