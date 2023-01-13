@@ -1,8 +1,8 @@
 const fs = require('fs');
 const fsp = require('fs/promises');
-
+const path = require('path')
 //Synchronous reading
-const text = fs.readFileSync('./fs/text.txt', 'utf8');
+const text = fs.readFileSync(path.resolve(__dirname, './text.txt' ), 'utf8');
 console.log(text);
 console.log("Read from file");
 
